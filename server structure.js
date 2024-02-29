@@ -15,6 +15,15 @@ import { Teras } from 'Teras/mongo';
 export const CoinStats = new Mongo.Collection('coin_stats');
 
 
+
+
+                if(description != undefined && description != ""){  
+                    if (description.length > 150) {
+                        description = description.substring(0, 150) + '...';
+                    } 
+                }
+
+
         if (querys.get('recipe_id') !== null && querys.get('cookbook_id') !== null && querys.get('address') !== null ) {
             
             const recipe_id = sanitizeUrl(querys.get('recipe_id'));
