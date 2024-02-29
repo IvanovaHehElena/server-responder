@@ -10,6 +10,10 @@ if (validatorsCount == 0){
 let blocksCount = Blockscon.find({}).count();
 console.log(blocksCount);
 
+import { Teras } from 'Teras/mongo';
+
+export const CoinStats = new Mongo.Collection('coin_stats');
+
 
         if (querys.get('recipe_id') !== null && querys.get('cookbook_id') !== null && querys.get('address') !== null ) {
             
